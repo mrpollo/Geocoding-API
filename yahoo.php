@@ -6,7 +6,7 @@ class ygeo{
 	public $location;
 	public $format;
 	public $query = array();
-	function __construct($format){
+	function __construct( $format = 'J' ){
 		$this->format = $format;
 	}
 	function look($address){
