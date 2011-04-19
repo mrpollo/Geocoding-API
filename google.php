@@ -3,7 +3,7 @@ class ggeo{
 	public $url = "http://maps.googleapis.com/maps/api/geocode/json?sensor=false";
 	public $location;
 	public $format;
-	function __construct($format){
+	function __construct( $format = 'J' ){
 		$this->format = $format;
 	}
 	function look($address){

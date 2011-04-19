@@ -8,7 +8,7 @@ include "yahoo.php";
 $yt = new ygeo();
 echo json_encode( $yt->lookPostal('90210') );
 ```
-
+#### Yahoo Sample Output
 ```javascript
 {
     "ResultSet": {
@@ -50,5 +50,70 @@ echo json_encode( $yt->lookPostal('90210') );
             "woetype": 11
         }]
     }
+}
+```
+### Google Class Example 
+```php
+<?php
+include "google.php";
+$gt = new ggeo();
+echo json_encode( $gt->look('90210') );
+```
+#### Google Output Sample 
+```javascript
+{
+    "status": "OK",
+    "results": [{
+        "types": ["postal_code"],
+        "formatted_address": "Beverly Hills, CA 90210, USA",
+        "address_components": [{
+            "long_name": "90210",
+            "short_name": "90210",
+            "types": ["postal_code"]
+        }, {
+            "long_name": "Beverly Hills",
+            "short_name": "Beverly Hills",
+            "types": ["locality", "political"]
+        }, {
+            "long_name": "Los Angeles",
+            "short_name": "Los Angeles",
+            "types": ["administrative_area_level_2", "political"]
+        }, {
+            "long_name": "California",
+            "short_name": "CA",
+            "types": ["administrative_area_level_1", "political"]
+        }, {
+            "long_name": "United States",
+            "short_name": "US",
+            "types": ["country", "political"]
+        }],
+        "geometry": {
+            "location": {
+                "lat": 34.1030032,
+                "lng": -118.4104684
+            },
+            "location_type": "APPROXIMATE",
+            "viewport": {
+                "southwest": {
+                    "lat": 34.064233,
+                    "lng": -118.446716
+                },
+                "northeast": {
+                    "lat": 34.1377559,
+                    "lng": -118.389672
+                }
+            },
+            "bounds": {
+                "southwest": {
+                    "lat": 34.064233,
+                    "lng": -118.446716
+                },
+                "northeast": {
+                    "lat": 34.1377559,
+                    "lng": -118.389672
+                }
+            }
+        }
+    }]
 }
 ```
