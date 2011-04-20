@@ -117,3 +117,5 @@ echo json_encode( $gt->look('90210') );
     }]
 }
 ```
+
+more info at http://ramonroche.com/?p=59
